@@ -1,0 +1,20 @@
+server:
+  port: 0
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/gb
+    username: serg
+    password: admin
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  application:
+    name: productApp
+
+  profiles:
+    active: eclient
+
+  config:
+    import: configserver:http://localhost:8888
