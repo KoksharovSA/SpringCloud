@@ -28,7 +28,7 @@ public class WebController {
 
     @GetMapping("/personalAccount")
     public String personalAccount(Model model){
-        List<Purchase> purchases = webClientService.getAllPurchasesUser(SecurityContextHolder.getContext().getAuthentication().getName()).getBody();
+        List<Purchase> purchases = webClientService.getAllPurchasesUser(SecurityContextHolder.getContext().getAuthentication().getName());
         model.addAttribute("purchases", purchases);
         model.addAttribute("user", SecurityContextHolder.getContext().getAuthentication().getName());
         return "personalAccount";
