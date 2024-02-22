@@ -6,6 +6,7 @@ import ru.gb.models.Product;
 import ru.gb.repositories.ProductRepository;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
@@ -17,7 +18,7 @@ public class ProductService {
     }
 
     public Product getProductById(Long id) {
-        return productRepository.findById(id).orElseThrow(null);
+        return productRepository.findById(id).get();
     }
 
     public List<Product> getProductLowerPrice(double price) {
