@@ -17,7 +17,7 @@ public class SecurityConfig {
 
     @Bean
     SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
-        http.authorizeHttpRequests((authorize) -> authorize.requestMatchers("/", "/index").permitAll()
+        http.authorizeHttpRequests((authorize) -> authorize.requestMatchers("/", "/index", "/actuator/prometheus").permitAll()
                         .requestMatchers("/adminPanel").hasAnyRole("ADMIN")
                         .anyRequest().authenticated()
                 )
