@@ -1,0 +1,3 @@
+2024-03-01T09:55:56.970008100
+Product(id=null, name=A50, description=Смартфон от Samsung, price=17000.0, pictureUrl=https://avatars.mds.yandex.net/get-marketpic/1641365/market_BlTtriJJqUEk8YLbUICafA/orig)
+___________________

@@ -6,7 +6,6 @@ import ru.gb.models.Product;
 import ru.gb.repositories.ProductRepository;
 
 import java.util.List;
-import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
